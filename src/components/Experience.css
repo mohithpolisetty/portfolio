@@ -1,0 +1,159 @@
+.timeline-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.timeline-column {
+  flex: 1;
+  min-width: 320px;
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.timeline-icon {
+  color: var(--text-accent);
+}
+
+.timeline {
+  border-left: 2px solid var(--text-accent);
+  padding-left: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.65rem;
+  top: 2.2rem;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-primary);
+  border: 4px solid var(--text-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  z-index: 10;
+}
+
+.item-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.item-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.item-date {
+  color: var(--text-accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.item-score {
+  font-weight: 600;
+  color: #fff;
+}
+
+.item-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.item-points li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.item-points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--text-accent);
+}
+
+/* Certificates */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.certificate-card {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.cert-icon {
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+  width: 32px;
+  height: 32px;
+}
+
+.cert-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.cert-date {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: var(--text-accent);
+  font-weight: 500;
+}
