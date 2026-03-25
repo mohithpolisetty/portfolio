@@ -3,6 +3,7 @@ import './Hero.css';
 import { personalData } from '../data';
 import { motion } from 'framer-motion';
 import { Download, ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import profilePic from '../assets/profilePic.jpg';
 
 const Hero = () => {
   const containerVariants = {
@@ -72,6 +73,17 @@ const Hero = () => {
               <Mail />
             </a>
           </motion.div>
+        </motion.div>
+
+        <motion.div 
+          className="hero-image-container"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="hero-image-wrapper">
+            <img src={profilePic} alt={personalData.name} className="hero-image" />
+          </div>
         </motion.div>
       </div>
     </section>
